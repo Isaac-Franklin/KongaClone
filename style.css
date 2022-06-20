@@ -1621,9 +1621,8 @@ width: 100%;
 
     .sectionAinner2A{
         display: flex;
-        padding: 31px 10px;
-        border: solid 0.8px rgb(214, 214, 214) 
-        /* box-shadow: 1px 1px 5px #292929; */
+        padding: 15px 10px;
+        border: solid 0.8px rgb(214, 214, 214);
         
      }
 
