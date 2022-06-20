@@ -1417,6 +1417,10 @@ width: 100%;
         width: 414px;
         overflow: hidden;
     }
+    
+     body::webkit-scrollbar{
+        display: none;
+    }
 
     .topad img{
         width: 100%;
