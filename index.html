@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konga Clone</title>
+</head>
+<body>
+    <nav>
+        <div class="topad" style="background-color: white">
+            <img src="images/kongatopad.webp">
+        </div>
+        <div class = 'navsection1outter' style="background-color: white">
+            <div class="navsection1">
+                <div>
+                    <img src="navimages/travels.webp">
+                </div>
+                <div>
+                    <img src="navimages/food.webp">
+                </div>
+                <div>
+                    <img src="navimages/pay.webp">                
+                </div>
+                <div>
+                    <img src="navimages/drinks.webp">                
+                </div>
+                <div>
+                    <img src="navimages/health.webp">                
+                </div>
+                <div>
+                    <img src="navimages/logistics.webp">                
+                </div>
+                <div>
+                    <img src="navimages/groceries.webp">                
+                </div>
+            </div>
+        </div>
+        <div class="navsection2">
+            <div class="navsection2in">
+                <div class="logo">
+                    <img src="images/logo.png">
+                </div>
+                <div class = 'navsection2inner'>
+                    <li>Store <br>Locator</li>
+                    <li>Sell on <br>Konga</li>
+                    <div class="navsearch">
+                        <input type="text" id="searchnav" placeholder="Search for products, brands and categories...">
+                        <img src="images/search.png">
+                    </div>
+                </div>
+                <div class="helpout" onmouseleave="toogledropdownkill()">
+                    <div class="helpnav" onmouseover = "toggledropdown()" >
+                        <img src="images/question.png">
+                        <p>Help</p>
+                        <img src="images/down-arrow.png">
+                    </div>
+                    <div class="helpdropdown" onmouseover = "toggledropdown()">
+                        <ul>
+                            <li>FAQs</li>
+                            <li>Contact Us</li>
+                            <li>Track your order</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                
+                <div >
+                    <p style="padding-right: 20px;">
+                        login/<br>signup
+                    </p>
+                </div>
+                <div class="cart">
+                    <img src="images/cart.png">
+                    <p>My<br> cart</p>
+                    <span style="background-color: white; padding: 7px 5px">0</span>
+                </div>
+            </div>
+        </div>
+<!-- BELOW IS THE LISTED MENU BUTTONS THAT WORK ON HOVER -->
+        <div class="navsection3"  onmouseleave="stop()">
+            <div class="menuoption category" onmouseover="start()" onmouseleave="stop()" onmouseover="start1()" onmouseover="start1()">
+                <p>All Categories</p>
+                <img src="images/menu.png">
+            </div>
+            <div class="menuoption compaccess computermenu" onmouseover="trigger1()" onmouseleave="trigger1kill()">
+                <p>Computers and Accessories</p>
+            </div>
+            <div class="menuoption phoneandtabmain phonemenu" onmouseover="trigger2()" onmouseleave="trigger2kill()">
+                <p>Phones and Tablets</p>
+            </div>
+            <div class="menuoption electmain electmenu" onmouseover="trigger3()" onmouseleave="trigger3kill()">
+                <p>Electronics</p>
+            </div>
+            <div class="menuoption fashionmain fashionmenu" onmouseover="trigger4()" onmouseleave="trigger4kill()">
+                <p>Konga Fashion</p>
+            </div>
+            <div class="menuoption homeandkitchmain homemenu" onmouseover="trigger5()" onmouseleave="trigger5kill()">
+                <p>Home and Kitchen</p>
+            </div>
+            <div class="menuoption boysandtoysmain babymenu"  onmouseover="trigger6()" onmouseleave="trigger6kill()">
+                <p>Baby, Kids and Toys</p>
+            </div>
+            <div class="menuoption othercatmain othermenu" onmouseover="trigger7()" onmouseleave="trigger7kill()">
+                <p>Other Categories</p>
+            </div>
+        </div>
+
+        <!-- ALL DROP DOWNS -->
+
+        <div class="navdrops">
+<!-- DROP DOWN SECTION FOR DISPLAYING SIDE DROP DOWN BAR -->
+            <div class='hoverbar' onmouseleave="navbarshowless()">
+                <div class="navsection4">
+                    <div class="categoryhoversection" onmouseover="start()" >
+                        <div class="categoryhoveroption computeroption1" onmouseover="start1()">
+                            <p>Computers and Accessories</p>
+                        </div>
+                        <div class="categoryhoveroption phoneandtab" onmouseover="start3()">
+                            <p>Phones and Tablets</p>
+                        </div>
+                        <div class="categoryhoveroption elect" onmouseover="start4()">
+                            <p>Electronics</p>
+                        </div>
+                        <div class="categoryhoveroption fashionkonga" onmouseover="start5()">
+                            <p>Konga Fashion</p>
+                        </div>
+                        <div class="categoryhoveroption home" onmouseover="start6()">
+                            <p>Home and Kitchen</p>
+                        </div>
+                        <div class="categoryhoveroption kids" onmouseover="start7()">
+                            <p>Baby, Kids and Toys</p>
+                        </div>
+                        <div class="categoryhoveroption others" onmouseover="start8()">
+                            <p>Other Categories</p>
+                        </div>
+                        <div class="categoryhoveroption eleveth" onmouseover="start9()">
+                            <p>Intel 11th Gen Campaign</p>
+                        </div>
+                    </div>
+<!-- FIRST HOVER SECTION THAT SHOWS UP HOVER ON SIDE BAR  -->
+
+                    <div class="categoryhoversectioninner" onmouseover="start()"  onmouseout="stop()">
+                        <div class='compsandacc secA compsection'>
+                            <div class="compsandaccinner">
+                                <div>
+                                    <div class="datasection1">
+                                        <ul>
+                                            <li>Laptops</li>
+                                            <li>Mini Laptops and Netbooks</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Desktops and Monitors</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Computing Accessories</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                    </div>
+        
+                                    <div class="datasection2">
+                                        <ul>
+                                            <li>Mini Laptops and Netbooks</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Desktops and Monitors</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Computing Accessories</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                    
+                                <div>
+                                    <img src="images/pic1.webp">
+                                </div>
+                            </div>      
+                        </div>
+
+                        <div class='phoneandtablets sectB'>
+                            <div class="phoneandtabletsinner">
+                                <div>
+                                    <div class="datasection1">
+                                    <ul>
+                                        <li>Mobile Phones</li>
+                                        <li>Mini Laptops and Netbooks</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Phones and Accessories</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Tablets</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    </div>
+
+                                    <div class="datasection2">
+                                        <ul>
+                                            <li>Tablets and Tablets Accessories</li>
+                                            <li>IPhones</li>
+                                            <li>Tabs</li>
+                                            <li>Apple Watches</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Shop By Price</li>
+                                            <li>10,000 Naira</li>
+                                            <li>20,000 Naira</li>
+                                            <li>30,000 Naira</li>
+                                            <li>Above</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="images/pic8.webp">
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class='electronics sectC'>
+                            <div class="electronicsinner">
+                                <div>
+                                    <div class="datasection1">
+                                        <ul>
+                                            <li>Electric Fans</li>
+                                            <li>Mini Laptops and Netbooks</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Machine and Accessories</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Tablets</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                    </div>
+            
+                                    <div class="datasection2">
+                                        <ul>
+                                            <li>Tablets and Tablets Accessories</li>
+                                            <li>IPhones</li>
+                                            <li>Tabs</li>
+                                            <li>Apple Watches</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Shop By Price</li>
+                                            <li>10,000 Naira</li>
+                                            <li>20,000 Naira</li>
+                                            <li>30,000 Naira</li>
+                                            <li>Above</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="images/pic3.jpg">
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+
+                        <div class='kongafashion sectD'>
+                            <div class="kongafashioninner">
+                                <div>
+                                    <div class="datasection1">
+                                        <ul>
+                                            <li>Gowns</li>
+                                            <li>Mini Laptops and Netbooks</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Weeding Gowns</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Suits</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                    </div>
+            
+                                    <div class="datasection2">
+                                        <ul>
+                                            <li>Tablets and Tablets Accessories</li>
+                                            <li>IPhones</li>
+                                            <li>Tabs</li>
+                                            <li>Apple Watches</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Shop By Price</li>
+                                            <li>10,000 Naira</li>
+                                            <li>20,000 Naira</li>
+                                            <li>30,000 Naira</li>
+                                            <li>Above</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="images/pic4.webp">
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class='homeandkitchen sectE'>
+                            <div class="homeandkitcheninner">
+                                <div>
+                                    <div class="datasection1">
+                                        <ul>
+                                            <li>Home Utensils</li>
+                                            <li>Mini Laptops and Netbooks</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Outdoor Materials</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Home Materials</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                    </div>
+            
+                                    <div class="datasection2">
+                                        <ul>
+                                            <li>Tablets and Tablets Accessories</li>
+                                            <li>IPhones</li>
+                                            <li>Tabs</li>
+                                            <li>Apple Watches</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Shop By Price</li>
+                                            <li>10,000 Naira</li>
+                                            <li>20,000 Naira</li>
+                                            <li>30,000 Naira</li>
+                                            <li>Above</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="images/pic5.webp">
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class='babykidsandtoys sectF'>
+                            <div class="babykidsandtoysinner">
+                                <div>
+                                    <div class="datasection1">
+                                <ul>
+                                    <li>Large Appliances</li>
+                                    <li>Mini Laptops and Netbooks</li>
+                                    <li>Notebooks</li>
+                                    <li>Ultrabooks</li>
+                                    <li>Hybrid PCs</li>
+                                    <li>Macbooks</li>
+                                </ul>
+                                <ul>
+                                    <li>Fashion for Boys</li>
+                                    <li>Notebooks</li>
+                                    <li>Ultrabooks</li>
+                                    <li>Hybrid PCs</li>
+                                    <li>Macbooks</li>
+                                </ul>
+                                <ul>
+                                    <li>Fashion for girls</li>
+                                    <li>Notebooks</li>
+                                    <li>Ultrabooks</li>
+                                    <li>Hybrid PCs</li>
+                                    <li>Macbooks</li>
+                                    <li>Ultrabooks</li>
+                                    <li>Hybrid PCs</li>
+                                    <li>Macbooks</li>
+                                </ul>
+                                    </div>
+
+                                    <div class="datasection2">
+                                        <ul>
+                                            <li>Maternity</li>
+                                            <li>IPhones</li>
+                                            <li>Tabs</li>
+                                            <li>Apple Watches</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Diapering and daily care</li>
+                                            <li>10,000 Naira</li>
+                                            <li>20,000 Naira</li>
+                                            <li>30,000 Naira</li>
+                                            <li>Above</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Maternity</li>
+                                            <li>IPhones</li>
+                                            <li>Tabs</li>
+                                            <li>Apple Watches</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="images/pic6.jpg">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='othercategories sectG'>
+                            <div class="othercategoriesinner">
+                                <div>
+                                    <div class="datasection1">
+                                        <ul>
+                                            <li>Beauty, Health & Personal Care</li>
+                                            <li>Mini Laptops and Netbooks</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Sport and Fitness</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Groceries</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        
+                                    </div>
+            
+                                    <div class="datasection1">
+                                        <ul>
+                                            <li>Beauty, Health & Personal Care</li>
+                                            <li>Mini Laptops and Netbooks</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Sport and Fitness</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Groceries</li>
+                                            <li>Notebooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                            <li>Ultrabooks</li>
+                                            <li>Hybrid PCs</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        
+                                    </div>
+            
+                                    <div class="datasection2">
+                                        <ul>
+                                            <li>Tablets and Tablets Accessories</li>
+                                            <li>IPhones</li>
+                                            <li>Tabs</li>
+                                            <li>Apple Watches</li>
+                                            <li>Macbooks</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Shop By Price</li>
+                                            <li>10,000 Naira</li>
+                                            <li>20,000 Naira</li>
+                                            <li>30,000 Naira</li>
+                                            <li>Above</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="images/pic7.webp">
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class='eleventhgen sectH'>
+                            <div class="datasection1">
+                                <ul>
+                                    <li>11th Generation Section</li>
+                                    <li>Mini Laptops and Netbooks</li>
+                                    <li>Notebooks</li>
+                                    <li>Ultrabooks</li>
+                                    <li>Hybrid PCs</li>
+                                    <li>Macbooks</li>
+                                </ul>
+                                <ul>
+                                    <li>Sport and Fitness</li>
+                                    <li>Notebooks</li>
+                                    <li>Ultrabooks</li>
+                                    <li>Hybrid PCs</li>
+                                    <li>Macbooks</li>
+                                </ul>
+                                <ul>
+                                    <li>Groceries</li>
+                                    <li>Notebooks</li>
+                                    <li>Ultrabooks</li>
+                                    <li>Hybrid PCs</li>
+                                    <li>Macbooks</li>
+                                    <li>Ultrabooks</li>
+                                    <li>Hybrid PCs</li>
+                                    <li>Macbooks</li>
+                                </ul>
+                                
+                            </div>
+
+                            <div class="datasection1">
+                                <ul>
+                                    <li>Beauty, Health & Personal Care</li>
+                                    <li>Mini Laptops and Netbooks</li>
+                                    <li>Notebooks</li>
+                                    <li>Ultrabooks</li>
+                                    <li>Hybrid PCs</li>
+                                    <li>Macbooks</li>
+                                </ul>
+                                <ul>
+                                    <li>Sport and Fitness</li>
+                                    <li>Notebooks</li>
+                                    <li>Ultrabooks</li>
+                                    <li>Hybrid PCs</li>
+                                    <li>Macbooks</li>
+                                </ul>
+                                <ul>
+                                    <li>Groceries</li>
+                                    <li>Notebooks</li>
+                                    <li>Ultrabooks</li>
+                                    <li>Hybrid PCs</li>
+                                    <li>Macbooks</li>
+                                    <li>Ultrabooks</li>
+                                    <li>Hybrid PCs</li>
+                                    <li>Macbooks</li>
+                                </ul>
+                                
+                            </div>
+
+                            <div class="datasection2">
+                                <ul>
+                                    <li>Tablets and Tablets Accessories</li>
+                                    <li>IPhones</li>
+                                    <li>Tabs</li>
+                                    <li>Apple Watches</li>
+                                    <li>Macbooks</li>
+                                </ul>
+                                <ul>
+                                    <li>Shop By Price</li>
+                                    <li>10,000 Naira</li>
+                                    <li>20,000 Naira</li>
+                                    <li>30,000 Naira</li>
+                                    <li>Above</li>
+                                </ul>
+                            </div>
+                            <img>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SECOND HOVER SECTION THAT SHOWS UP HOVER ON NAV BAR  -->
+            <div class="secondhoverarea">
+                <div class="categoryhoversectioninner2">
+                    <div class='compsandacc secA secA1 compsection2' onmouseover="trigger1()" onmouseleave="trigger1kill()">
+                        <div class="compsandaccinner" style="background-color: white;" >
+                            <div>
+                                <div class="datasection1">
+                                    <ul>
+                                        <li>Laptops</li>
+                                        <li>Mini Laptops and Netbooks</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Desktops and Monitors</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Computing Accessories</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                </div>
+
+                                <div class="datasection2">
+                                    <ul>
+                                        <li>Mini Laptops and Netbooks</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Desktops and Monitors</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Computing Accessories</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                </div>
+                            </div>
+                                
+                            <div>
+                                <img src="images/pic1.webp">
+                            </div>
+                        </div>      
+                    </div>
+
+                    <div class='phoneandtablets sectB sectB1 phonesection2' onmouseover="trigger2()" onmouseleave="trigger2kill()">
+                        <div class="phoneandtabletsinner" style="background-color: white;" >
+                            <div>
+                                <div class="datasection1">
+                                <ul>
+                                    <li>Mobile Phones</li>
+                                    <li>Mini Laptops and Netbooks</li>
+                                    <li>Notebooks</li>
+                                    <li>Ultrabooks</li>
+                                    <li>Hybrid PCs</li>
+                                    <li>Macbooks</li>
+                                </ul>
+                                <ul>
+                                    <li>Phones and Accessories</li>
+                                    <li>Notebooks</li>
+                                    <li>Ultrabooks</li>
+                                    <li>Hybrid PCs</li>
+                                    <li>Macbooks</li>
+                                </ul>
+                                <ul>
+                                    <li>Tablets</li>
+                                    <li>Notebooks</li>
+                                    <li>Ultrabooks</li>
+                                    <li>Hybrid PCs</li>
+                                    <li>Macbooks</li>
+                                    <li>Ultrabooks</li>
+                                    <li>Hybrid PCs</li>
+                                    <li>Macbooks</li>
+                                </ul>
+                                </div>
+
+                                <div class="datasection2">
+                                    <ul>
+                                        <li>Tablets and Tablets Accessories</li>
+                                        <li>IPhones</li>
+                                        <li>Tabs</li>
+                                        <li>Apple Watches</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Shop By Price</li>
+                                        <li>10,000 Naira</li>
+                                        <li>20,000 Naira</li>
+                                        <li>30,000 Naira</li>
+                                        <li>Above</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="images/pic8.webp">
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class='electronics sectC sectC1 electsection2' onmouseover="trigger3()" onmouseleave="trigger3kill()">
+                        <div class="electronicsinner" style="background-color: white;" >
+                            <div>
+                                <div class="datasection1">
+                                    <ul>
+                                        <li>Electric Fans</li>
+                                        <li>Mini Laptops and Netbooks</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Machine and Accessories</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Tablets</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                </div>
+        
+                                <div class="datasection2">
+                                    <ul>
+                                        <li>Tablets and Tablets Accessories</li>
+                                        <li>IPhones</li>
+                                        <li>Tabs</li>
+                                        <li>Apple Watches</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Shop By Price</li>
+                                        <li>10,000 Naira</li>
+                                        <li>20,000 Naira</li>
+                                        <li>30,000 Naira</li>
+                                        <li>Above</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="images/pic3.jpg">
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+
+                    <div class='kongafashion sectD sectD1 fashionsection2' onmouseover="trigger4()" onmouseleave="trigger4kill()">
+                        <div class="kongafashioninner" style="background-color: white;" >
+                            <div>
+                                <div class="datasection1">
+                                    <ul>
+                                        <li>Gowns</li>
+                                        <li>Mini Laptops and Netbooks</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Weeding Gowns</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Suits</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                </div>
+        
+                                <div class="datasection2">
+                                    <ul>
+                                        <li>Tablets and Tablets Accessories</li>
+                                        <li>IPhones</li>
+                                        <li>Tabs</li>
+                                        <li>Apple Watches</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Shop By Price</li>
+                                        <li>10,000 Naira</li>
+                                        <li>20,000 Naira</li>
+                                        <li>30,000 Naira</li>
+                                        <li>Above</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="images/pic4.webp">
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class='homeandkitchen sectE sectE1 homesection2' onmouseover="trigger5()" onmouseleave="trigger5kill()">
+                        <div class="homeandkitcheninner" style="background-color: white;" >
+                            <div>
+                                <div class="datasection1">
+                                    <ul>
+                                        <li>Home Utensils</li>
+                                        <li>Mini Laptops and Netbooks</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Outdoor Materials</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Home Materials</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                </div>
+        
+                                <div class="datasection2">
+                                    <ul>
+                                        <li>Tablets and Tablets Accessories</li>
+                                        <li>IPhones</li>
+                                        <li>Tabs</li>
+                                        <li>Apple Watches</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Shop By Price</li>
+                                        <li>10,000 Naira</li>
+                                        <li>20,000 Naira</li>
+                                        <li>30,000 Naira</li>
+                                        <li>Above</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="images/pic5.webp">
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class='babykidsandtoys sectF sectF1 babysection2' onmouseover="trigger6()" onmouseleave="trigger6kill()">
+                        <div class="babykidsandtoysinner" style="background-color: white;" >
+                            <div>
+                                <div class="datasection1">
+                            <ul>
+                                <li>Large Appliances</li>
+                                <li>Mini Laptops and Netbooks</li>
+                                <li>Notebooks</li>
+                                <li>Ultrabooks</li>
+                                <li>Hybrid PCs</li>
+                                <li>Macbooks</li>
+                            </ul>
+                            <ul>
+                                <li>Fashion for Boys</li>
+                                <li>Notebooks</li>
+                                <li>Ultrabooks</li>
+                                <li>Hybrid PCs</li>
+                                <li>Macbooks</li>
+                            </ul>
+                            <ul>
+                                <li>Fashion for girls</li>
+                                <li>Notebooks</li>
+                                <li>Ultrabooks</li>
+                                <li>Hybrid PCs</li>
+                                <li>Macbooks</li>
+                                <li>Ultrabooks</li>
+                                <li>Hybrid PCs</li>
+                                <li>Macbooks</li>
+                            </ul>
+                                </div>
+
+                                <div class="datasection2">
+                                    <ul>
+                                        <li>Maternity</li>
+                                        <li>IPhones</li>
+                                        <li>Tabs</li>
+                                        <li>Apple Watches</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Diapering and daily care</li>
+                                        <li>10,000 Naira</li>
+                                        <li>20,000 Naira</li>
+                                        <li>30,000 Naira</li>
+                                        <li>Above</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Maternity</li>
+                                        <li>IPhones</li>
+                                        <li>Tabs</li>
+                                        <li>Apple Watches</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="images/pic6.jpg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='othercategories sectG sectG1 othersection2' onmouseover="trigger7()" onmouseleave="trigger7kill()">
+                        <div class="othercategoriesinner" style="background-color: white; padding-top: 20px;">
+                            <div>
+                                <div class="datasection1">
+                                    <ul>
+                                        <li>Beauty, Health & Personal Care</li>
+                                        <li>Mini Laptops and Netbooks</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Sport and Fitness</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Groceries</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    
+                                </div>
+        
+                                <div class="datasection1">
+                                    <ul>
+                                        <li>Beauty, Health & Personal Care</li>
+                                        <li>Mini Laptops and Netbooks</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Sport and Fitness</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Groceries</li>
+                                        <li>Notebooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                        <li>Ultrabooks</li>
+                                        <li>Hybrid PCs</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    
+                                </div>
+        
+                                <div class="datasection2">
+                                    <ul>
+                                        <li>Tablets and Tablets Accessories</li>
+                                        <li>IPhones</li>
+                                        <li>Tabs</li>
+                                        <li>Apple Watches</li>
+                                        <li>Macbooks</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Shop By Price</li>
+                                        <li>10,000 Naira</li>
+                                        <li>20,000 Naira</li>
+                                        <li>30,000 Naira</li>
+                                        <li>Above</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="images/pic7.webp">
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class='eleventhgen sectH sectH1' style="background-color: white;">
+                        <div class="datasection1">
+                            <ul>
+                                <li>11th Generation Section</li>
+                                <li>Mini Laptops and Netbooks</li>
+                                <li>Notebooks</li>
+                                <li>Ultrabooks</li>
+                                <li>Hybrid PCs</li>
+                                <li>Macbooks</li>
+                            </ul>
+                            <ul>
+                                <li>Sport and Fitness</li>
+                                <li>Notebooks</li>
+                                <li>Ultrabooks</li>
+                                <li>Hybrid PCs</li>
+                                <li>Macbooks</li>
+                            </ul>
+                            <ul>
+                                <li>Groceries</li>
+                                <li>Notebooks</li>
+                                <li>Ultrabooks</li>
+                                <li>Hybrid PCs</li>
+                                <li>Macbooks</li>
+                                <li>Ultrabooks</li>
+                                <li>Hybrid PCs</li>
+                                <li>Macbooks</li>
+                            </ul>
+                            
+                        </div>
+
+                        <div class="datasection1">
+                            <ul>
+                                <li>Beauty, Health & Personal Care</li>
+                                <li>Mini Laptops and Netbooks</li>
+                                <li>Notebooks</li>
+                                <li>Ultrabooks</li>
+                                <li>Hybrid PCs</li>
+                                <li>Macbooks</li>
+                            </ul>
+                            <ul>
+                                <li>Sport and Fitness</li>
+                                <li>Notebooks</li>
+                                <li>Ultrabooks</li>
+                                <li>Hybrid PCs</li>
+                                <li>Macbooks</li>
+                            </ul>
+                            <ul>
+                                <li>Groceries</li>
+                                <li>Notebooks</li>
+                                <li>Ultrabooks</li>
+                                <li>Hybrid PCs</li>
+                                <li>Macbooks</li>
+                                <li>Ultrabooks</li>
+                                <li>Hybrid PCs</li>
+                                <li>Macbooks</li>
+                            </ul>
+                            
+                        </div>
+
+                        <div class="datasection2">
+                            <ul>
+                                <li>Tablets and Tablets Accessories</li>
+                                <li>IPhones</li>
+                                <li>Tabs</li>
+                                <li>Apple Watches</li>
+                                <li>Macbooks</li>
+                            </ul>
+                            <ul>
+                                <li>Shop By Price</li>
+                                <li>10,000 Naira</li>
+                                <li>20,000 Naira</li>
+                                <li>30,000 Naira</li>
+                                <li>Above</li>
+                            </ul>
+                        </div>
+                        <img>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </nav>
+<!-- END OF NAV BAR -->
+<main>
+    <div class="herosection">
+        <div class="maincontainer">
+            <div class="arrow leftarrow">
+                <img src="images/left-arrow.png">
+            </div>
+            
+            <div class="maincarousel">
+                
+                    <div>
+                        <img src="carousel/pic1.jpg">
+                    </div>
+                    <div>
+                        <img src="carousel/pic2.webp">
+                    </div>
+                    <div>
+                        <img src="carousel/pic3.webp">
+                    </div>
+                    <div>
+                        <img src="carousel/pic4.webp">
+                    </div>
+                    <div>
+                        <img src="carousel/pic5.webp">
+                    </div>
+                    <div>
+                        <img src="carousel/pic1.jpg">
+                    </div>
+            </div>
+            <div class="arrow rightarrow">
+                <img src="images/right-arrow.png">
+            </div>
+        </div>
+    
+    <!-- THE SIDE BAR IN THE HERO SECTION -->
+        <div class="sidegallery">
+                <img src="sideimage/pic1.webp">
+                <img src="sideimage/pic2.webp">
+                <img src="sideimage/pic3.webp">
+                <img src="sideimage/pic4.jpg">
+            </div>
+    </div>
+
+    <div class="lineimages">
+        <div>
+            <img src="images/linepic1.webp">
+        </div>
+        <div>
+            <img src="images/linepic2.webp">
+        </div>
+        <div>
+            <img src="images/linepic3.webp">
+        </div>
+        <div>
+            <img src="images/linepic4.webp">
+        </div>
+        <div>
+            <img src="images/linepic5.webp">
+        </div>
+        <div>
+            <img src="images/linepic6.webp">
+        </div>
+    </div>
+
+    <div class="sectionA">
+        <div class="sectionAinner1">
+            <h3>Recommended for you</h3>
+            <p>See All Items</p>
+        </div>
+        <hr>
+        <div class="sectionAinner2">
+            <div class="sectionAinner2A">
+                <img src="images/sectionAinnerpic1.webp">
+                <div>
+                    <p>Konga Courier Bag - Large - Bund...</p><br>
+                    <p>₦1,800 <s style="font-size: 12px;">₦2,200</s></p>
+                    <span>You can save ₦820</span>
+                    <div style="display: flex;">
+                        <img style="width: 10px;" src="images/star.png">
+                        <img style="width: 10px;" src="images/star.png">
+                        <img style="width: 10px;" src="images/star.png">
+                        <img style="width: 10px;" src="images/star.png">
+                        <img  style="width: 10px; padding-right: 10px;" src="images/star.png">
+                        <h6>21 Reviews</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="sectionAinner2B">
+                <div>
+                     <img src="images/sectionAinnerpic2.webp">
+                </div>
+                <div>
+                <p>Jameson Irish Whiskey - 70cl - 4...</p><br>
+                    <p>₦8,200 <s style="font-size: 12px;">₦9,430</s></p>
+                    <span>You can save ₦1,250</span>
+                </div>
+                
+            </div>
+            <div class="sectionAinner2C">
+                <div>
+                    <img src="images/sectionAinnerpic3.webp">
+                </div>
+                <div>
+                    <p>Samsung Galaxy S22 Ultra 5g - 6....</p><br>
+                    <p>₦710,000</p>
+                </div>
+                
+            </div>
+        </div>
+
+
+
+        <div class="sectionAinner2 sectionAinner2second">
+            <div class="sectionAinner2A">
+                <img src="images/sectionAinnerpic1.webp">
+                <div>
+                    <p>Konga Courier Bag - Large - Bund...</p><br>
+                    <p>₦1,800 <s style="font-size: 12px;">₦2,200</s></p>
+                    <span>You can save ₦820</span>
+                    <div style="display: flex;">
+                        <img style="width: 10px;" src="images/star.png">
+                        <img style="width: 10px;" src="images/star.png">
+                        <img style="width: 10px;" src="images/star.png">
+                        <img style="width: 10px;" src="images/star.png">
+                        <img  style="width: 10px; padding-right: 10px;" src="images/star.png">
+                        <h6>21 Reviews</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="sectionAinner2B">
+                <div>
+                     <img src="images/sectionAinnerpic2.webp">
+                </div>
+                <div>
+                <p>Jameson Irish Whiskey - 70cl - 4...</p><br>
+                    <p>₦8,200 <s style="font-size: 12px;">₦9,430</s></p>
+                    <span>You can save ₦1,250</span>
+                </div>
+                
+            </div>
+            <div class="sectionAinner2C">
+                <div>
+                    <img src="images/sectionAinnerpic3.webp">
+                </div>
+                <div>
+                    <p>Samsung Galaxy S22 Ultra 5g - 6....</p><br>
+                    <p>₦710,000</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="sectionB">
+        <div class="sectionBimg">
+            <img src="images/sectionBpic1.webp">
+        </div>
+        <div class="sectionBimg">
+            <img src="images/sectionBpic2.webp">
+        </div>
+        <div class="sectionBimg">
+            <img src="images/sectionBpic3.webp">
+        </div>
+        <div class="sectionBimg">
+            <img src="images/sectionBpic4.webp">
+        </div>
+        <div class="sectionBimg">
+            <img src="images/sectionBpic5.webp">
+        </div>
+        <div class="sectionBimg">
+            <img src="images/sectionBpic6.webp">
+        </div>
+    </div>
+
+    <div class="sectionC">
+        <div class="sectionC1">
+            <img src="images/longcarousel1.webp">
+        </div>
+        <div class="sectionC2">
+            <img src="images/longcarousel2.jpg">
+            <img src="images/longcarousel2B.jpg">
+        </div>
+        
+    </div>
+
+    <div class="sectionD">
+        <div class= 'sectionDinner1a'>
+            <div class= 'sectionDinner1'>
+                <p>Best Selling Products</p>
+            </div>
+        </div>
+        <div class = 'sectionDcarousel'>
+            <div class="sectionDinner2a">
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/ricebagpic.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD11.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD1.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD4.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD5.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+            </div>
+            <div class="sectionDinner2a" style="margin-left: 30px;">
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD6.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD7.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD8.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD9.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD10.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sectionD" style="margin-top: 30px;">
+        <div class= 'sectionDinner1a'>
+            <div class= 'sectionDinner1'>
+                <p>Inspired By Your Cart</p>
+            </div>
+        </div>
+        <div class = 'sectionDcarousel'>
+            <div class="sectionDinner2a">
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD9.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD10.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD11.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD12.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD11.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+            </div>
+            <div class="sectionDinner2a" style="margin-left: 30px;">
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD8.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD9.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD10.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD11.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD12.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <div class="sectionD" style="margin-top: 30px;">
+        <div class= 'sectionDinner1a'>
+            <div class= 'sectionDinner1'>
+                <p>Your Browsing History</p>
+            </div>
+        </div>
+        <div class = 'sectionDcarousel'>
+            <div class="sectionDinner2a">
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD13.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD14.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD15.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD16.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD11.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+            </div>
+            <div class="sectionDinner2a" style="margin-left: 30px;">
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD8.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD9.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD10.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD11.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+                <div class="sectionDinner2">
+                    <p id="pricetagediscount">14% OFF</p>
+                    <img src="images/sectionD12.webp">
+                    <p>Big Bull Rice - 50kg</p><br>
+                    <h3 style="align-items: center;">₦30,100 <s style="font-size: 14px;  color: grey;">₦35,200</s></h3>
+                    <span>You can save ₦4,900</span>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <div class = 'sectionEout'>
+    <div class="sectionE">
+        <div class="sectionEinner">
+            <img src="images/sectionE1.webp"><br><br><br>
+            <h3 style="color: rgb(49, 49, 49)">HOME FURNSHING</h3><br><br>
+            <p>Get Up To 70% OFF</p><br><br>
+            <div style="display: flex; align-items: center;">
+                <p style="font-size: 14px; color: rgb(237,1,127);">SHOP NOW</p>
+                <img style="width: 10px; height: 10px;" src="images/right-arrow.png">
+            </div>
+            
+        </div>
+        <div class="sectionEinner">
+            <img src="images/sectionE2.webp"><br><br><br>
+            <h3 style="color: rgb(49, 49, 49)">HOME FURNSHING</h3><br><br>
+            <p>Get Up To 70% OFF</p><br><br>
+            <div style="display: flex; align-items: center;">
+                <p style="font-size: 14px; color: rgb(237,1,127);">SHOP NOW</p>
+                <img style="width: 10px; height: 10px;" src="images/right-arrow.png">
+            </div>
+            
+        </div>
+        <div class="sectionEinner">
+            <img src="images/sectionE3.webp"><br><br><br>
+            <h3 style="color: rgb(49, 49, 49)">HOME FURNSHING</h3><br><br>
+            <p>Get Up To 70% OFF</p><br><br>
+            <div style="display: flex; align-items: center;">
+                <p style="font-size: 14px; color: rgb(237,1,127);">SHOP NOW</p>
+                <img style="width: 10px; height: 10px;" src="images/right-arrow.png">
+            </div>
+            
+        </div>
+        <div class="sectionEinner">
+            <img src="images/sectionE4.jpg"><br><br><br>
+            <h3 style="color: rgb(49, 49, 49)">HOME FURNSHING</h3><br><br>
+            <p>Get Up To 70% OFF</p><br><br>
+            <div style="display: flex; align-items: center;">
+                <p style="font-size: 14px; color: rgb(237,1,127);">SHOP NOW</p>
+                <img style="width: 10px; height: 10px;" src="images/right-arrow.png">
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    
+
+    <div class="sectionF">
+        <div class="logo1">
+            <img src="images/logo1.webp">
+        </div>
+        <div>
+            <img src="images/logo2.webp">
+        </div>
+        <div>
+            <img src="images/logo3.webp">
+        </div>
+        <div>
+            <img src="images/logo4.webp">
+        </div>
+        <div>
+            <img src="images/logo5.webp">
+        </div>
+        <div  class="logo2">
+            <img src="images/logo6.webp">
+        </div>
+        <div class="logo3">
+            <img src="images/logo7.webp">
+        </div>
+        <div>
+            <img src="images/logo8.webp">
+        </div>
+        <div>
+            <img src="images/logo9.webp">
+        </div>
+        <div>
+            <img src="images/logo10.webp">
+        </div>
+        <div>
+            <img src="images/logo11.webp">
+        </div>
+        <div class="logo4">
+            <img src="images/logo12.webp">
+        </div>
+    </div>
+</main>
+
+<div class="prefooter">
+    <div class = 'footersession'>
+        <h3 style="color: rgb(26, 25, 25)">Konga Online Shopping in Nigeria - Best Shopping Site</h3>
+        <p style="color: rgb(82, 81, 81)">
+        Konga.com is Nigeria’s number one online Shopping destination.We pride ourselves in having everything you could possibly need for life and living at the best prices than anywhere else. Our access to Original Equipment Manufacturers and premium sellers gives us a wide range of products at very low prices. Some of our popular categories include electronics, mobile phones, computers, fashion, beauty products, home and kitchen, Building and construction materials and a whole lot more from premium brands. Some of our other categories include Food and drinks, automotive and industrial, books, musical equipment, babies and kids items, sports and fitness, to mention a few. To make your shopping experience swift and memorable, there are also added services like gift vouchers, consumer promotion activities across different categories and bulk purchases with hassle-free delivery. Enjoy free shipping rates for certain products and with the bulk purchase option, you can enjoy low shipping rates, discounted prices and flexible payment. When you shop on our platform, you can pay with your debit card or via KongaPay, which is a convenient and secured payment solution. Get the best of lifestyle services online. Don't miss out on the biggest sales online which takes place on special dates yearly.
+        </p>
+    </div>
+    
+</div>
+
+<footer>
+    <div class="footersection1">
+        <div class="footersection1Aout">
+            <div class="footersection1A">
+                <div>
+                    <img src="images/email.png">
+                </div>
+                <div>
+                    <p style="font-size: 15px; font-weight: bold; padding-bottom: 8px;">EMAIL SUPPORT</p>
+                    <p style="font-size: 14px;">isaacfranklin...</p>
+                </div>
+            </div>
+    
+            <div class="footersection1A">
+                <div>
+                    <img src="images/phone-call.png">
+                </div>
+                <div>
+                    <p style="font-size: 15px; font-weight: bold; padding-bottom: 8px;">Phone Support</p>
+                    <p style="font-size: 14px;">07011567240...</p>
+                </div>
+            </div>
+    
+            <div class="footersection1A">
+                <div>
+                    <img src="images/whatsapp.png">
+                </div>
+                <div>
+                    <p style="font-size: 15px; font-weight: bold; padding-bottom: 8px;">Whatsapp</p>
+                    <p style="font-size: 14px;">07011567240, 07053139341...</p>
+                </div>
+            </div>
+            <div class="footersection1A">
+                <div>
+                    <p style="font-size: 15px; font-weight: bold; padding-bottom: 8px;">Get Latest Deals</p>
+                    <p style="font-size: 14px;">Get Promotion sent to your email inbox.</p>
+                </div>
+            </div>
+            <div class="emailsession">
+                <input type="text" placeholder="Email Address">
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </div>
+    <div class="footersection2">
+        <div class="footersection2out">
+            <div class="footersection2A">
+                <div class="footersection2Ainner">
+                <h4 style="padding-bottom: 20px;">ABOUT KONGA</h4>
+                <ul>
+                    <li>Contact Us</li>
+                    <li>About Us</li>
+                    <li>Career</li>
+                    <li>Our Blog</li>
+                    <li>Forum</li>
+                    <li>Terms & Conditions</li>
+                </ul>
+                </div>
+                <div class="footersection2Ainner">
+                    <h4 style="padding-bottom: 20px;">PAYMENTS</h4>
+                    <ul>
+                        <li>Konga Pay</li>
+                        <li>Wallet</li>
+                        <li>Verve</li>
+                        <li>Mastercard</li>
+                        <li>Cards</li>
+                    </ul>
+                </div>
+                <div class="footersection2Ainner">
+                    <h4 style="padding-bottom: 20px;">BUYING ON KONGA</h4>
+                    <ul>
+                        <li>Buyer Safety Center</li>
+                        <li>FAQs</li>
+                        <li>Deliveries</li>
+                        <li>Digital Services</li>
+                        <li>Buing in Bulk</li>
+                    </ul>
+                </div>
+                <div class="footersection2Ainner">
+                    <h4 style="padding-bottom: 20px;">MORE INFO</h4>
+                    <ul>
+                        <li>Sitemap</li>
+                        <li>Track Order</li>
+                        <li>Privacy Policy</li>
+                        <li>Autheticate Item Polic</li>
+                    </ul>
+                </div>
+                <div class="footersection2Ainner">
+                    <h4 style="padding-bottom: 20px;">MAKE MONEY ON KONGA</h4>
+                    <ul>
+                        <li>Become  A Konga Affiliate</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footersection2B_">
+                <div class="footersection2B">
+                <h4 style="width: 280px; padding-bottom: 20px; color: rgb(148, 147, 147);">DOWNLOAD & CONNECT WITH US</h4>
+                <div class="footersection2Bin">
+                    <div style="padding-right: 20px;">
+                    <div class="footersection2Binner">
+                        <img style="width: 30px; padding-right: 5px;" src="images/apple (1).png">
+                        <div>
+                            <h6>Download Now</h6>
+                            <p style="font-weight: bold;">App Store</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div style="width: 150px;" class="footersection2Binner">
+                        <img style="width: 30px; padding-right: 5px;" src="images/android.png">
+                        <div>
+                            <h6>Download Now</h6>
+                            <p style="font-weight: bold;">Google Play</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+                
+                </div>
+    
+                <div class="footersection2B">
+                    <h4 style="width: 280px; padding-bottom: 20px; color: rgb(148, 147, 147);">CONNECT WITH US</h4>
+                    <div class="footersection2Bin">
+                        <div class="footersection2Binner2">
+                            <img style="width: 40px; padding-right: 5px;" src="images/facebook.png">
+                            <img style="width: 40px; padding-right: 5px;" src="images/instagram.png">
+                            <img style="width: 40px; padding-right: 5px;" src="images/twitter.png">
+                            <img style="width: 40px; padding-right: 5px;" src="images/youtube.png">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+   
+
+<script type="text/javascript" src="main.js">
+</script>
+</body>
+</html>
