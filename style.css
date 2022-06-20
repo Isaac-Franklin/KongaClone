@@ -1416,7 +1416,6 @@ width: 100%;
     body{
         width: 414px;
         overflow: hidden;
-        box-sizing: border-box;
     }
     
     
