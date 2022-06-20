@@ -1122,6 +1122,10 @@ width: 100%;
     
 }
 
+.ratestars{
+    display: flex;
+}
+
 .sectionF{
     display: grid;
     width: 98%;
