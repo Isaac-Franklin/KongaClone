@@ -1714,6 +1714,9 @@ width: 100%;
         border-top-right-radius: 5px;
         cursor: pointer;
     }
+    .ratestars{
+        display: none;
+    }
 
 
 
